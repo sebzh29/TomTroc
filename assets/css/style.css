@@ -1,0 +1,1351 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+  --primary: #00ac66;
+  --primary-dark: #006d41;
+  --bg: #faf9f7;
+  --light-gray: #f5f3ef;
+  --text: #222;
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.main-content {
+  min-height: calc(100vh - 160px);
+}
+
+.page {
+  padding: 80px 0;
+}
+
+.page_title {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 45px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  background: white;
+  border-bottom: 1px solid #efefef;
+}
+
+.header_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header_logo_img {
+  width: 155px;
+}
+
+.header_nav_left,
+.header_nav_right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.header_nav_left a,
+.header_nav_right a {
+  font-size: 14px;
+  color: #333;
+}
+
+.active {
+  font-weight: 600;
+}
+
+.badge {
+  background: black;
+  color: white;
+  font-size: 10px;
+  border-radius: 50%;
+  padding: 2px 5px;
+  margin-left: 5px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.btn_outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home_hero {
+  padding: 90px 0 110px;
+  background: var(--bg);
+}
+
+.home_hero_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.home_hero_text {
+  max-width: 420px;
+  justify-self: center;
+}
+
+.home_hero_text h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+
+.home_hero_text p {
+  font-size: 16px;
+  line-height: 1.45;
+  margin-bottom: 40px;
+}
+
+.home_hero_btn {
+  display: inline-block;
+  padding: 18px 42px;
+  font-weight: 600;
+}
+
+.home_hero_image img {
+  width: 420px;
+  height: 520px;
+  object-fit: cover;
+}
+
+.home_hero_image span {
+  display: block;
+  text-align: right;
+  color: #aaa;
+  font-size: 12px;
+  font-style: italic;
+  margin-top: 10px;
+}
+.home_values_signature {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.home_values_signature span {
+  color: #aaa;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.home_values_signature img {
+  width: 120px;
+  height: auto;
+}
+
+/* LATEST BOOKS */
+
+.home_latest {
+  padding: 85px 0;
+  background: white;
+}
+
+.home_latest h2,
+.home_steps h2 {
+  font-size: 36px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.home_books_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 38px;
+  max-width: 920px;
+  margin: 0 auto 50px;
+}
+
+.home_center {
+  display: flex;
+  justify-content: center;
+}
+
+/* HOW IT WORKS */
+
+.home_steps {
+  padding: 85px 0;
+  background: var(--light-gray);
+  text-align: center;
+}
+
+.home_steps_intro {
+  max-width: 430px;
+  margin: -35px auto 45px;
+  line-height: 1.4;
+}
+
+.home_steps_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  max-width: 960px;
+  margin: 0 auto 50px;
+}
+
+.home_step_card {
+  background: white;
+  border-radius: 10px;
+  min-height: 135px;
+  padding: 35px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.25;
+}
+
+.home_outline_btn {
+  width: 220px;
+  height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BANNER */
+
+.home_banner {
+  height: 260px;
+}
+
+.home_banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* VALUES */
+
+.home_values {
+  padding: 90px 0 120px;
+  background: var(--bg);
+}
+
+.home_values_content {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.home_values_content h2 {
+  font-size: 36px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.home_values_content p {
+  line-height: 1.45;
+  margin-bottom: 24px;
+}
+
+.home_values_content span {
+  display: block;
+  margin-top: 40px;
+  color: #aaa;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* =========================
+   AUTH
+========================= */
+
+.auth_layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 90px);
+}
+
+.auth_left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px;
+}
+
+.auth_card {
+  width: 100%;
+  max-width: 380px;
+}
+
+.auth_title {
+  font-size: 48px;
+  font-weight: 400;
+  margin-bottom: 45px;
+}
+
+.form_group {
+  margin-bottom: 24px;
+}
+
+.form_group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #999;
+  font-size: 14px;
+}
+
+.form_group input,
+.form_group textarea,
+.form_group select {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #f5f3ef;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form_group textarea {
+  min-height: 220px;
+  resize: vertical;
+}
+
+.auth_btn {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.auth_link {
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.auth_link a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.auth_right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   ACCOUNT
+========================= */
+
+.account {
+  background: var(--bg);
+}
+
+.account_top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  margin-bottom: 34px;
+}
+
+.account_card {
+  background: white;
+  border-radius: 20px;
+  padding: 48px 70px;
+  min-height: 410px;
+}
+
+.profile_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile_avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.profile_edit {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 14px;
+  color: #888;
+  text-decoration: underline;
+}
+
+.profile_card hr {
+  width: 250px;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+  margin: 45px 0 35px;
+}
+
+.profile_name {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.profile_sub {
+  color: #999;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.profile_books_label {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.profile_books {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.account_subtitle {
+  margin-bottom: 28px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.account_card .form_group {
+  margin-bottom: 26px;
+}
+
+.account_card .form_group input {
+  background: #edf0f2;
+  border-radius: 6px;
+  height: 50px;
+  padding: 0 16px;
+}
+
+.account_card .btn_outline {
+  width: 150px;
+  height: 58px;
+  font-weight: 600;
+}
+
+/* TABLE */
+
+.account_books {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.account_books table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.account_books thead {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.account_books th {
+  padding: 24px 18px;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.account_books td {
+  padding: 22px 18px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.account_books td:nth-child(4) {
+  max-width: 280px;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.book_img {
+  width: 82px;
+  height: 82px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.badge.available {
+  background: #6cc9a2;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.badge.unavailable {
+  background: #c56b83;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.account_books a {
+  text-decoration: underline;
+}
+
+.account_books .danger {
+  color: #d94141;
+  margin-left: 20px;
+}
+
+.account_books_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px 0 20px;
+}
+
+.account_books_header h2 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* =========================
+   BOOKS EXCHANGE
+========================= */
+
+.books_exchange {
+  background: var(--bg);
+}
+
+.books_exchange_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.books_exchange_header h1 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.books_search input {
+  width: 320px;
+  height: 50px;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background: white;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.books_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px 38px;
+}
+
+.book_card {
+  background: white;
+  overflow: hidden;
+}
+
+.book_card_image {
+  height: 200px;
+  position: relative;
+}
+
+.book_card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book_status {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #d66b83;
+  color: white;
+  font-size: 11px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.book_card_content {
+  padding: 18px 16px 22px;
+}
+
+.book_card_content h2 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.book_author {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.book_owner {
+  font-size: 11px;
+  color: #aaa;
+  font-style: italic;
+}
+
+/* =========================
+   BOOK DETAIL
+========================= */
+
+.book_detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 90px);
+}
+
+.book_detail_image {
+  height: calc(100vh - 90px);
+}
+
+.book_detail_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book_detail_content {
+  padding: 70px 90px;
+  display: flex;
+  flex-direction: column;
+}
+
+.book_detail_breadcrumb {
+  font-size: 12px;
+  color: #b8b8b8;
+  margin-bottom: 70px;
+}
+
+.book_detail_content h1 {
+  font-size: 54px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.book_detail_author {
+  color: #9d9d9d;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.book_detail_separator {
+  width: 35px;
+  height: 1px;
+  background: #d8d8d8;
+  margin-bottom: 40px;
+}
+
+.book_detail_content h2 {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.book_detail_description {
+  line-height: 1.6;
+  max-width: 560px;
+  margin-bottom: 45px;
+}
+
+.book_owner_card {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border-radius: 999px;
+  width: fit-content;
+  padding: 8px 18px 8px 8px;
+  margin-bottom: 70px;
+}
+
+.book_owner_card img {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.book_owner_card span {
+  font-size: 14px;
+}
+
+.book_detail_btn {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  margin-top: auto;
+  padding: 18px;
+}
+
+/* =========================
+   BOOK FORM
+========================= */
+
+.book_form_page {
+  background: var(--bg);
+}
+
+.book_form_container {
+  max-width: 900px;
+}
+
+.back_link {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.book_form_container h1 {
+  font-size: 42px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+.book_form {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.book_form_preview {
+  width: 180px;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* =========================
+   DELETE
+========================= */
+
+.delete_page {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.delete_card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  border-radius: 20px;
+  padding: 55px 60px;
+  text-align: center;
+}
+
+.delete_card h1 {
+  font-size: 44px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.delete_card p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.delete_card strong {
+  font-weight: 600;
+}
+
+.delete_actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.delete_actions form {
+  margin: 0;
+}
+
+.delete_actions .btn_outline,
+.delete_actions .delete_btn {
+  min-width: 170px;
+  height: 56px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete_actions .btn_outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.delete_actions .btn_outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.delete_btn {
+  background: #d74c4c;
+  border: none;
+}
+
+.delete_btn:hover {
+  background: #bf3d3d;
+} /* =========================
+   DELETE
+========================= */
+
+.delete_page {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.delete_card {
+  width: 100%;
+  max-width: 520px;
+  background: white;
+  border-radius: 20px;
+  padding: 55px 60px;
+  text-align: center;
+}
+
+.delete_card h1 {
+  font-size: 44px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.delete_card p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.delete_card strong {
+  font-weight: 600;
+}
+
+.delete_actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.delete_actions form {
+  margin: 0;
+}
+
+.delete_actions .btn_outline,
+.delete_actions .delete_btn {
+  min-width: 170px;
+  height: 56px;
+  border-radius: 10px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete_actions .btn_outline {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.delete_actions .btn_outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.delete_btn {
+  background: #d74c4c;
+  border: none;
+}
+
+.delete_btn:hover {
+  background: #bf3d3d;
+}
+
+/* =========================
+   PUBLIC PROFILE
+========================= */
+
+.public_profile {
+  background: var(--bg);
+}
+
+.public_profile_header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.public_avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.public_profile_header h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.public_profile_header p {
+  color: #999;
+  margin-top: 10px;
+}
+
+.public_books_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+/* =========================
+   MESSAGES PAGE
+========================= */
+
+.messages_page {
+  background: var(--bg);
+  min-height: calc(100vh - 90px);
+}
+
+.messages_layout {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  min-height: calc(100vh - 90px);
+}
+
+/* SIDEBAR */
+
+.messages_sidebar {
+  background: #fff;
+  padding: 55px 0;
+}
+
+.messages_sidebar h1 {
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 35px 35px;
+}
+
+.conversation_item {
+  display: flex;
+  gap: 12px;
+  padding: 18px 35px;
+}
+
+.conversation_item:hover,
+.active_conversation {
+  background: var(--light-gray);
+}
+
+.conversation_item img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.conversation_content {
+  width: 100%;
+  min-width: 0;
+}
+
+.conversation_top {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.conversation_top strong {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.conversation_top span {
+  font-size: 12px;
+  color: #555;
+}
+
+.conversation_content p {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #999;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* THREAD */
+
+.messages_thread {
+  padding: 55px 0 35px 45px;
+  display: flex;
+  flex-direction: column;
+}
+
+.thread_header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.thread_header img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.thread_header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.thread_messages {
+  flex: 1;
+  padding-right: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.message_line {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 28px;
+  max-width: 620px;
+}
+
+.message_line img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 22px;
+}
+
+.message_line_sent {
+  margin-left: auto;
+  text-align: right;
+}
+
+.message_line_received {
+  margin-right: auto;
+}
+
+.message_date {
+  display: block;
+  color: #aaa;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.message_bubble {
+  display: inline-block;
+  padding: 14px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.message_sent {
+  background: #edf0f2;
+}
+
+.message_received {
+  background: #fff;
+}
+
+/* FORM */
+
+.message_form {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  gap: 22px;
+  padding-right: 35px;
+}
+
+.message_form textarea {
+  height: 50px;
+  resize: none;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  padding: 16px 22px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.message_form button {
+  height: 50px;
+}
+
+.thread_placeholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.messages_empty {
+  margin: 0 35px;
+  color: #999;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  background: white;
+  border-top: 1px solid #efefef;
+  padding: 25px 0;
+}
+
+.footer_container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+  .books_grid,
+  .public_books_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .book_detail {
+    grid-template-columns: 1fr;
+  }
+
+  .book_detail_image {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header_container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .header_left {
+    flex-direction: column;
+  }
+
+  .auth_layout {
+    grid-template-columns: 1fr;
+  }
+
+  .auth_right {
+    display: none;
+  }
+
+  .hero_container {
+    flex-direction: column;
+  }
+
+  .account_top {
+    grid-template-columns: 1fr;
+  }
+
+  .account_card {
+    padding: 30px 24px;
+  }
+
+  .books_exchange_header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .books_search input {
+    width: 100%;
+  }
+
+  .books_grid,
+  .public_books_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book_detail_content {
+    padding: 40px 25px;
+  }
+
+  .book_detail_content h1 {
+    font-size: 38px;
+  }
+
+  .footer_container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================
+   PAGE 404
+========================= */
+
+.error404 {
+  min-height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.error404_container {
+  text-align: center;
+}
+
+.error404_code {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 110px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.error404 h1 {
+  margin-bottom: 18px;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+.error404_text {
+  margin-bottom: 38px;
+  color: #777;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.error404_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 190px;
+  min-height: 52px;
+  padding: 14px 24px;
+  font-weight: 600;
+}
