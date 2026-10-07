@@ -1,8 +1,9 @@
 # Configuration locale contenant les identifiants BDD
-config.php
+config/config.php
 
 # Fichiers système / IDE
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
+.refact 
