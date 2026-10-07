@@ -1,0 +1,8 @@
+# Configuration locale contenant les identifiants BDD
+config.php
+
+# Fichiers système / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

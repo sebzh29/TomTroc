@@ -91,14 +91,7 @@ Modifier :
 config/config.php
 ```
 
-avec :
-
-```php
-DB_HOST=
-DB_NAME=
-DB_USER=
-DB_PASSWORD=
-```
+pour installer le projet il faut copier config.sample.php en config.php et renseigner ses propres identifiants.
 
 ## 4. Lancer le projet
 
